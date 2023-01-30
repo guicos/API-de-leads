@@ -1,0 +1,141 @@
+.header{
+    width: 100%;
+    height: 50px;
+    background-color: #280c42;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu{
+    background-color: #280c42;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 12%;
+}
+
+.menu ul{
+    padding: 0px;
+}
+
+.menu ul li{
+    padding-top: 38px;
+    width: 100%;
+    list-style: none;
+    border-bottom: #46157398 1px solid;
+    border-top: #46157398 1px solid;
+    text-align: center;
+    height: 50px;
+}
+
+.content{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main{
+    width: 80%;
+    height: 85vh;
+    margin: 50px 70px 0px 0px;
+    background-color: white;
+    overflow-x: auto;
+    box-shadow: rgba(101, 46, 240, 0.4) -5px 5px, rgba(117, 46, 240, 0.3) -10px 10px, rgba(133, 46, 240, 0.2) -15px 15px, rgba(137, 46, 240, 0.107) -20px 20px, rgba(143, 46, 240, 0.05) -25px 25px;
+}
+
+.trTopicos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-weight: bold;
+    color: rgba(101, 46, 240, 0.4);
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.td{
+    max-width: 11ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.table{
+    width: 100%;
+}
+
+.trList{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 15px;
+    color: black;
+    align-items: center;
+    text-align: left;
+}
+
+.button{
+    font-weight: bold;
+    color: #280c42;
+    font-size: 10px;
+}
+
+.quadro{
+    display: flex;
+    flex-direction: row;
+}
+
+.listButton{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    align-items: center;
+    list-style: none;
+}
+
+.tbody{
+    display: flex;
+    flex-direction: row;
+}
+
+.nav{
+    width: 1%;
+}
+
+.input{
+    width: 10%;
+}
+
+.inputTelefone{
+    width: 25%;
+}
+
+.inputNome{
+    width: 50%;
+}
+
+.menores{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.media{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.maiores{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
