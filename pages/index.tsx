@@ -12,27 +12,28 @@ export default function Dashboard() {
   const [resultQuery, setresultQuery] = useState<ILead[]>([]);
   const [query, setQuery] = useState("");
 
-/*   const optionsCnae = lead.map((leads) => ({
-    value: leads.empresa.cnae.nome,
-    label: leads.empresa.cnae.nome,
+   const optionsCnae = lead.map((leads) => ({
+    value: leads.empresa ? leads.empresa.cnae.nome: '',
+    label: leads.empresa ? leads.empresa.cnae.nome: '',
     name: "NomeCnae",
-  })); */
+  }));
 
-/*   const optionSector = lead.map((leads) => ({
-    value: leads.empresa.setor.nome,
-    label: leads.empresa.setor.nome,
+   const optionSector = lead.map((leads) => ({
+    value: leads.empresa ? leads.empresa.setor.nome: '',
+    label: leads.empresa ? leads.empresa.setor.nome: '',
     name: "NomeSetor",
-  })); */
+  }));
+  console.log(lead)
 
   const optionArea = lead.map((leads) => ({
-    value: leads.area.nome,
-    label: leads.area.nome,
+    value: leads.area ? leads.area.nome : '',
+    label: leads.area ? leads.area.nome: '',
     name: "NomeArea",
   }));
 
   const optionOffice = lead.map((leads) => ({
-    value: leads.cargo.nome,
-    label: leads.cargo.nome,
+    value: leads.cargo ? leads.cargo.nome: '',
+    label: leads.cargo ? leads.cargo.nome: '',
     name: "NomeCargo",
   }));
 
@@ -43,8 +44,8 @@ export default function Dashboard() {
   }));
 
   const optionDDDEmpresa = lead.map((leads) => ({
-    value: leads.DDD,
-    label: leads.DDD,
+    value: leads.empresa ? leads.DDD: '',
+    label: leads.empresa ? leads.DDD: '',
     name: "DDDEmpresa",
   }));
 
@@ -80,32 +81,32 @@ export default function Dashboard() {
   }));
 
   const optionTelefoneEmpresa = lead.map((leads) => ({
-    value: leads.empresa.telefone,
-    label: leads.empresa.telefone,
+    value: leads.empresa ? leads.empresa.telefone:'',
+    label: leads.empresa ? leads.empresa.telefone:'',
     name: "EmpresaTelefone",
   }));
 
   const optionNomeEmpresa = lead.map((leads) => ({
-    value: leads.empresa.nome_empresa,
-    label: leads.empresa.nome_empresa,
+    value: leads.empresa ? leads.empresa.nome_empresa:'',
+    label: leads.empresa ? leads.empresa.nome_empresa: '',
     name: "NomeEmpresa",
   }));
 
   const optionNomeFantasia = lead.map((leads) => ({
-    value: leads.empresa.nome_fantasia,
-    label: leads.empresa.nome_fantasia,
+    value: leads.empresa ? leads.empresa.nome_fantasia: '',
+    label: leads.empresa ? leads.empresa.nome_fantasia: '',
     name: "NomeFantasia",
   }));
 
   const optionCNPJ = lead.map((leads) => ({
-    value: leads.empresa.CNPJ,
-    label: leads.empresa.CNPJ,
+    value: leads.empresa ? leads.empresa.CNPJ: '',
+    label: leads.empresa ? leads.empresa.CNPJ: '',
     name: "CNPJ",
   }));
 
   const optionNumeroFilial = lead.map((leads) => ({
-    value: leads.empresa.numero_filial,
-    label: leads.empresa.numero_filial,
+    value: leads.empresa ? leads.empresa.numero_filial: '',
+    label: leads.empresa ? leads.empresa.numero_filial: '',
     name: "NumeroFilial",
   }));
 
@@ -131,10 +132,10 @@ export default function Dashboard() {
           <tr className={styles.trList}>
             <td className={styles.td}>{element.nome}</td>
             <td className={styles.td}>{element.telefone}</td>
-            <td className={styles.td}>{element.empresa.nome_empresa}</td>
-           {/*  <td className={styles.td}>{element.empresa.setor.nome}</td>
-            <td className={styles.td}>{element.empresa.cnae.nome}</td> */}
-            <td className={styles.td}>{element.empresa.telefone}</td>
+            <td className={styles.td}>{element.empresa ? element.empresa.nome_empresa: ''}</td>
+            <td className={styles.td}>{element.empresa ? element.empresa.setor.nome: ''}</td>
+            <td className={styles.td}>{element.empresa ? element.empresa.cnae.nome: ''}</td>
+            <td className={styles.td}>{element.empresa ? element.empresa.telefone: ''}</td>
           </tr>
         </tbody>
       </table>
