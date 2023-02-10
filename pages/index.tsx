@@ -12,17 +12,17 @@ export default function Dashboard() {
   const [resultQuery, setresultQuery] = useState<ILead[]>([]);
   const [query, setQuery] = useState("");
 
-  const optionsCnae = lead.map((leads) => ({
+/*   const optionsCnae = lead.map((leads) => ({
     value: leads.empresa.cnae.nome,
     label: leads.empresa.cnae.nome,
     name: "NomeCnae",
-  }));
+  })); */
 
-  const optionSector = lead.map((leads) => ({
+/*   const optionSector = lead.map((leads) => ({
     value: leads.empresa.setor.nome,
     label: leads.empresa.setor.nome,
     name: "NomeSetor",
-  }));
+  })); */
 
   const optionArea = lead.map((leads) => ({
     value: leads.area.nome,
@@ -132,8 +132,8 @@ export default function Dashboard() {
             <td className={styles.td}>{element.nome}</td>
             <td className={styles.td}>{element.telefone}</td>
             <td className={styles.td}>{element.empresa.nome_empresa}</td>
-            <td className={styles.td}>{element.empresa.setor.nome}</td>
-            <td className={styles.td}>{element.empresa.cnae.nome}</td>
+           {/*  <td className={styles.td}>{element.empresa.setor.nome}</td>
+            <td className={styles.td}>{element.empresa.cnae.nome}</td> */}
             <td className={styles.td}>{element.empresa.telefone}</td>
           </tr>
         </tbody>
