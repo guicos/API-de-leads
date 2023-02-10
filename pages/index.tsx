@@ -156,7 +156,7 @@ export default function Dashboard() {
         </nav>
         <article className={styles.main}>
           <div className={styles.menores}>
-            <CreatableSelect
+            {/* <CreatableSelect
               isClearable
               id="Cnae"
               instanceId="selectCnae"
@@ -166,8 +166,8 @@ export default function Dashboard() {
               options={optionsCnae}
               onChange={handleRequestGet}
               placeholder="Cnae"
-            />
-            <CreatableSelect
+            /> */}
+            {/* <CreatableSelect
               id="Setor"
               isClearable
               instanceId="selectSetor"
@@ -177,7 +177,7 @@ export default function Dashboard() {
               options={optionSector}
               onChange={handleRequestGet}
               placeholder="Setor"
-            />
+            /> */}
             <CreatableSelect
               id="Area"
               isClearable
