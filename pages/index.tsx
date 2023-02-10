@@ -117,7 +117,7 @@ export default function Dashboard() {
   const handleRequestGet = (event: any) => {
     if (event) {
       fetch(
-        `https://systembrutamarketing.com.br:21160/lead?${event.name}=${event.value}`
+        `https://systembrutamarketing.com.br/lead?${event.name}=${event.value}`
       )
         .then((response) => response.json())
         .then((data) => setresultQuery(data));
