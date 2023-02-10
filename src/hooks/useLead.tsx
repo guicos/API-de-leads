@@ -7,7 +7,7 @@ export const useLead = () => {
 
     useEffect(() => {
         if(lead.length === 0){
-            fetch(`http://brutadev.kinghost.net:21023/lead`)
+            fetch(`https://ystembrutamarketing.com.br:21160/lead`)
                 . then((response) => response.json())
                 .then((data) => setLead(data))
         }
