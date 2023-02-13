@@ -12,7 +12,7 @@ export default function Dashboard() {
   const [resultQuery, setresultQuery] = useState<ILead[]>([]);
   const [query, setQuery] = useState("");
 
-   const optionsCnae = lead.map((leads) => ({
+   /* const optionsCnae = lead.map((leads) => ({
     value: leads.empresa ? leads.empresa.cnae.nome: '',
     label: leads.empresa ? leads.empresa.cnae.nome: '',
     name: "NomeCnae",
@@ -22,7 +22,7 @@ export default function Dashboard() {
     value: leads.empresa ? leads.empresa.setor.nome: '',
     label: leads.empresa ? leads.empresa.setor.nome: '',
     name: "NomeSetor",
-  }));
+  })); */
   console.log(lead)
 
   const optionArea = lead.map((leads) => ({
@@ -133,8 +133,8 @@ export default function Dashboard() {
             <td className={styles.td}>{element.nome}</td>
             <td className={styles.td}>{element.telefone}</td>
             <td className={styles.td}>{element.empresa ? element.empresa.nome_empresa: ''}</td>
-            <td className={styles.td}>{element.empresa ? element.empresa.setor.nome: ''}</td>
-            <td className={styles.td}>{element.empresa ? element.empresa.cnae.nome: ''}</td>
+            {/* <td className={styles.td}>{element.empresa ? element.empresa.setor.nome: ''}</td>
+            <td className={styles.td}>{element.empresa ? element.empresa.cnae.nome: ''}</td> */}
             <td className={styles.td}>{element.empresa ? element.empresa.telefone: ''}</td>
           </tr>
         </tbody>
